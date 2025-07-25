@@ -5,12 +5,12 @@ from bot.ai_agent import ask_ai
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Привіт! Я — твій DevOps AI Agent Максіка. Напиши мені щось.")
+    await update.message.reply_text("Hello! I am your AI Agent. Write something to me. I work only with text. 🚀")
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_input = update.message.text
-    await update.message.reply_text("🔄 Думаю над відповіддю...")
+    await update.message.reply_text("🔄 I am considering a written response....")
     try:
         response = await ask_ai(user_input)
         await update.message.reply_text(response)
